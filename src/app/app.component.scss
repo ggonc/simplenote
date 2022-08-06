@@ -1,0 +1,49 @@
+$dm-color-primary: #031C30;
+$dm-color-secondary: #667A8A;
+
+$lm-color-primary: #FDFDFD;
+$lm-color-secondary: #F5FFFA;
+
+$color-1: #000000;
+$color-2: #14213D;
+$color-3: #FCA311;
+$color-4: #E5E5E5;
+$color-5: #fafafa;
+
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav-content {
+  width: auto;
+  background-color: $color-4;
+}
+
+mat-sidenav {
+  background-color: $color-5;
+  width: 250px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+main {
+  height: 100vh;
+}
+
+.small-logo {
+  width: 160px;
+}
+
+.sidenav-icon-button {
+  border-radius: 7.5px;
+  border: none;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+
+}
+
+  
