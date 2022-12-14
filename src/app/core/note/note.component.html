@@ -1,1 +1,25 @@
-<p>note works!</p>
+<form class="w-full" method="post">
+    <div class="grid grid-cols-2 gap-10 mb-5">
+        <div class="inline-grid">
+            <mat-label class="text-lg font-black mb-3">Title</mat-label>
+            <mat-form-field appearance="outline" #title>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="inline-grid">
+            <mat-label class="text-lg font-black mb-3">Category</mat-label>
+            <mat-form-field appearance="outline" #category>
+                <input matInput>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="grid grid-cols-1">
+        <mat-form-field appearance="outline">
+            <textarea matInput rows="30" class="resize-y rounded-md w-full"></textarea>
+        </mat-form-field>
+    </div>
+    <div class="text-end mt-auto">
+        <button mat-button type="button" [routerLink]="['/notes']" class="bg-dm-secondary/20">Back</button>
+        <button mat-button type="submit" class="margin-l-5 bg-green-700/70">Save</button>
+    </div>
+</form>

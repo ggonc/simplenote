@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'notepad';
   opened = true;
-
-  // showFiller = false;
+  
   constructor() { }
 
   ngOnInit(): void {

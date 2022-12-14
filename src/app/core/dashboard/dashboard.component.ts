@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  name: string;
 
-  constructor() { }
+  constructor() {
+    this.name = "Guilherme"
+   }
 
   ngOnInit(): void {
+
   }
 
 }

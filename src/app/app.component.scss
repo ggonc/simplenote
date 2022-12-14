@@ -1,49 +1,46 @@
-$dm-color-primary: #031C30;
 $dm-color-secondary: #667A8A;
 
-$lm-color-primary: #FDFDFD;
-$lm-color-secondary: #F5FFFA;
-
-$color-1: #000000;
-$color-2: #14213D;
-$color-3: #FCA311;
-$color-4: #E5E5E5;
-$color-5: #fafafa;
-
-
-mat-sidenav-container {
-  height: 100%;
+mat-icon{
+  padding-right: 1rem;
 }
 
-mat-sidenav-content {
-  width: auto;
-  background-color: $color-4;
-}
-
-mat-sidenav {
-  background-color: $color-5;
-  width: 250px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-
-}
-
-main {
-  height: 100vh;
-}
-
+// Sidenav
 .small-logo {
   width: 160px;
+  margin-bottom: 15px;
+}
+
+// Buttons
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mode-change {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 10px;
 }
 
 .sidenav-icon-button {
   border-radius: 7.5px;
   border: none;
   width: 100%;
-  padding: 5px 10px;
-  margin-bottom: 5px;
-
+  padding: 4px 8px;
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
-  
+.sidenav-icon-button:hover {
+  background-color: $dm-color-secondary;
+  cursor: pointer;
+}
+
+#logout-button {
+  background-color: rgb(184, 184, 184);
+  cursor: pointer;
+}

@@ -1,1 +1,21 @@
-<p>settings works!</p>
+<div class="mb-20">
+    <p class="text-3xl font-black" style="font-family: Epilogue">Settings</p>
+</div>
+<div class="grid grid-cols-10 gap-2 h-full">
+    <!-- Navigation -->
+    <div class="bg-secondary-gray/20 col-span-2 rounded-lg h-96 p-2 flex flex-col items-center">
+        <button mat-button [routerLink]="['']" class="w-full">
+            <mat-icon class="mx-2">account_circle</mat-icon>
+            Profile
+        </button>
+        <button mat-button [routerLink]="['']" class="w-full">
+            <mat-icon class="mx-2">help_icon</mat-icon>
+            Help
+        </button>
+    </div>
+    
+    <!-- Content -->
+    <div class="bg-secondary-gray/20 col-span-8 rounded-lg h-96">
+    
+    </div>
+</div>

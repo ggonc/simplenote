@@ -1,1 +1,30 @@
-<p>notes-list works!</p>
+<div class="mb-20">
+    <p class="text-3xl font-black" style="font-family: Epilogue">My notes</p>
+    <p class="text-lg italic font-medium">Here's a list of all your notes</p>
+</div>
+<div class="rounded-lg p-1 bg-white">
+    <table #table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="actions" class="">
+            <th mat-header-cell *matHeaderCellDef class="font-bold text-base text-pure-black rounded-tl-lg"></th>
+            <td mat-cell *matCellDef="let note"></td>
+        </ng-container>
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef class="font-bold text-base text-pure-black">Title</th>
+            <td mat-cell *matCellDef="let note"> {{note.title}} </td>
+        </ng-container>
+        <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef class="font-bold text-base text-pure-black">Category</th>
+            <td mat-cell *matCellDef="let note"> {{note.category}} </td>
+        </ng-container>
+        <ng-container matColumnDef="modifiedIn">
+            <th mat-header-cell *matHeaderCellDef class="font-bold text-base text-pure-black rounded-tr-lg">Modified In</th>
+            <td mat-cell *matCellDef="let note"> {{note.modifiedIn}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay" class="bg-secondary-gray"></tr>
+        <tr mat-row *matRowDef="let note; columns: columnsToDisplay"></tr>
+    </table>
+</div>
+<div class="text-end mt-5">
+    <button mat-raised-button (click)="addNote()" class="bg-main-blue text-main-white">+ New Note</button>
+</div>
