@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: DashboardComponent},
   { path: 'home', component: DashboardComponent},
   { path: 'notes', component: NotesListComponent},
-  { path: 'note', component: NoteComponent},
+  { path: 'note/:id', component: NoteComponent},
   { path: 'settings', component: SettingsComponent}
 ];
 

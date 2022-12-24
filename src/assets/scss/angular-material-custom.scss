@@ -1,0 +1,13 @@
+.mat-form-field-outline {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+// On focus
+div {
+    &.mat-form-field-outline.mat-form-field-outline-thick.ng-tns-c128-1.ng-star-inserted{
+        outline: none;
+        border-radius: 10px;
+        background-color: rgb(196, 170, 161);    
+    }
+}

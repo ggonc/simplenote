@@ -1,33 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
+import { ActivatedRoute } from '@angular/router';
+import { NotesViewModel } from 'src/app/mock/models/notes.type';
+import { NotesListService } from './notes-list.service';
 
-const ELEMENT_DATA: Notes[] = [
-  {
-    title: "Title #01",
-    content: "Lorem Ipsum",
-    category: "Category #01",
-    modifiedIn: "2022-12-03",
-  },
-  {
-    title: "Title #02",
-    content: "Lorem Ipsum dolor",
-    category: "Category #02",
-    modifiedIn: "2022-12-04"
-  },
-  {
-    title: "Title #03",
-    content: "Lorem Ipsum dolor sit amet",
-    category: "Category #03",
-    modifiedIn: "2022-12-05"
-  }
-]
-
-export interface Notes {
-  title: string;
-  content: string;
-  category: string;
-  modifiedIn: string
-}
 
 @Component({
   selector: 'app-notes-list',
@@ -36,22 +12,52 @@ export interface Notes {
 })
 export class NotesListComponent implements OnInit {
   columnsToDisplay = ['actions', 'title', 'category', 'modifiedIn'];
-  dataSource = [...ELEMENT_DATA];
+  data: NotesViewModel[] = [];
 
-  @ViewChild(MatTable) table: MatTable<Notes>;
+  result: any;
+  clickedNotes = new Set<NotesViewModel>();
 
-  constructor() { }
+  @ViewChild(MatTable) table: MatTable<NotesViewModel>;
+
+  constructor(
+    private route: ActivatedRoute,
+    private _service: NotesListService
+    ) { }
 
   ngOnInit(): void {
+    this.getNotes();
   }
 
   addNote(): void {
-    this.dataSource.push({
+    this.data.push({
+        id: 4,
         title: "Title #04",
         content: "Lorem Ipsum dolor sit amet lorem",
         category: "Category #04",
         modifiedIn: "2022-12-06"
     });
+    this.table.renderRows();
+  }
+
+  getNotes(): void {
+    this._service.getNotes().subscribe(notes => {
+      this.data = notes
+    });
+  }
+
+  getNote(param: any): void {
+    this.result = param.title
+  }
+
+  editNote(): void {
+
+    // EDIT code here
+    
+    console.log();
+  }
+
+  deleteNote(id: number): void {
+    this.data.splice(this.data.findIndex(e => e.id === id), 1);
     this.table.renderRows();
   }
 

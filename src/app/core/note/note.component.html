@@ -2,7 +2,7 @@
     <div class="grid grid-cols-2 gap-10 mb-5">
         <div class="inline-grid">
             <mat-label class="text-lg font-black mb-3">Title</mat-label>
-            <mat-form-field appearance="outline" #title>
+            <mat-form-field appearance="outline" #title class="border-none">
                 <input matInput>
             </mat-form-field>
         </div>
@@ -15,7 +15,7 @@
     </div>
     <div class="grid grid-cols-1">
         <mat-form-field appearance="outline">
-            <textarea matInput rows="30" class="resize-y rounded-md w-full"></textarea>
+            <textarea matInput rows="30" class="resize-y rounded-md w-full max-h-[550px]"></textarea>
         </mat-form-field>
     </div>
     <div class="text-end mt-auto">

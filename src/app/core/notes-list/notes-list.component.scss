@@ -2,18 +2,21 @@ table {
     width: 100%;
 }
 
-.mat-column-actions {
-    flex: 0 0 50px !important
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: 0;
 }
+// .mat-column-actions {
+//     flex: 0 0 50px !important
+// }
 
-.mat-column-title {
-    flex: 0 0 200px !important
-}
+// .mat-column-title {
+//     flex: 0 0 200px !important
+// }
 
-.mat-column-category {
-    flex: 0 0 100px !important
-}
+// .mat-column-category {
+//     flex: 0 0 100px !important
+// }
 
-.mat-column-modifiedIn {
-    flex: 0 0 auto !important
-}
+// .mat-column-modifiedIn {
+//     flex: 0 0 auto !important
+// }

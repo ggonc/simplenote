@@ -1,4 +1,6 @@
 ## TO-DO
+- [ ] Escrever método EDIT
+- [X] Escrever método DELETE
 - [ ] Criar component para headers
 - [ ] Criar página de erro 404
 - [ ] Criar página de Settings
