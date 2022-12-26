@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
-import { NotesViewModel } from 'src/app/mock/models/notes.type';
+import { NoteViewModel } from 'src/app/mock/models/notes.type';
 import { NotesListService } from './notes-list.service';
 
 
@@ -12,13 +12,10 @@ import { NotesListService } from './notes-list.service';
 })
 export class NotesListComponent implements OnInit {
   columnsToDisplay = ['actions', 'title', 'category', 'modifiedIn'];
-  data: NotesViewModel[] = [];
+  data: NoteViewModel[] = [];
 
-  result: any;
-  clickedNotes = new Set<NotesViewModel>();
-
-  @ViewChild(MatTable) table: MatTable<NotesViewModel>;
-
+  @ViewChild(MatTable) table: MatTable<NoteViewModel>;
+  
   constructor(
     private route: ActivatedRoute,
     private _service: NotesListService
@@ -43,17 +40,6 @@ export class NotesListComponent implements OnInit {
     this._service.getNotes().subscribe(notes => {
       this.data = notes
     });
-  }
-
-  getNote(param: any): void {
-    this.result = param.title
-  }
-
-  editNote(): void {
-
-    // EDIT code here
-    
-    console.log();
   }
 
   deleteNote(id: number): void {

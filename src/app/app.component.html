@@ -1,62 +1,62 @@
 <main class="h-full">
   <!-- SIDE BAR -->
-  <mat-sidenav-container class="h-full">
-    <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="bg-main-blue text-pure-white w-[250px] p-7">
-      <div class="h-full flex flex-col justify-start">
-        <div class="sidenav-image">
-          <img class="w-40 mb-4" src="../assets/images/simplenote-logo-full.png" alt="SimpleNote logo">
+    <mat-sidenav-container class="h-full">
+      <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="bg-main-blue text-pure-white w-[250px] p-7">
+        <div class="h-full flex flex-col justify-start">
+          <div class="sidenav-image">
+            <img class="w-40 mb-4" src="../assets/images/simplenote-logo-full.png" alt="SimpleNote logo">
+          </div>
+          <!-- Navigation -->
+          <div class="sidenav-navigation">
+            <button mat-button [routerLink]="['']" class="sidenav-icon-button">
+              <mat-icon class="mx-2">home</mat-icon>
+              Dashboard
+            </button>
+            <button mat-button [routerLink]="['/notes']" class="sidenav-icon-button">
+              <mat-icon class="mx-2">note</mat-icon>
+              Notes
+            </button>
+            <button mat-button [routerLink]="['/settings']" class="sidenav-icon-button">
+              <mat-icon class="mx-2">settings</mat-icon>
+              Settings
+            </button>
+            <button mat-button [routerLink]="['/a']" class="sidenav-icon-button">
+              <mat-icon class="mx-2">error</mat-icon>
+              ERROR 404 (TEMP)
+            </button>
+          </div>
+    
+          <!-- Sidenav Footer -->
+          <div class="mt-auto">
+            <div class="mode-change">
+              <mat-icon>brightness_2</mat-icon>
+              <span>Light Mode</span>
+              <mat-slide-toggle color="primary">On</mat-slide-toggle>
+            </div>
+            <button mat-button class="cursor-pointer bg-dm-secondary sidenav-icon-button">Logout</button>
+          </div>
         </div>
-        <!-- Navigation -->
-        <div class="sidenav-navigation">
-          <button mat-button [routerLink]="['']" class="sidenav-icon-button">
-            <mat-icon class="mx-2">home</mat-icon>
-            Dashboard
+      </mat-sidenav>
+  
+      <mat-sidenav-content class="w-auto bg-secondary-gray/10">
+        <!-- TOOL BAR -->
+        <mat-toolbar class="shadow-md">
+          <button mat-icon-button (click)="sidenav.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
           </button>
-          <button mat-button [routerLink]="['/notes']" class="sidenav-icon-button">
-            <mat-icon class="mx-2">note</mat-icon>
-            Notes
+          <span class="flex-grow flex-shrink basis-auto"></span>
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
           </button>
-          <button mat-button [routerLink]="['/settings']" class="sidenav-icon-button">
-            <mat-icon class="mx-2">settings</mat-icon>
-            Settings
-          </button>
-          <button mat-button [routerLink]="['/note']" class="sidenav-icon-button">
-            <mat-icon class="mx-2">library_books</mat-icon>
-            Note (TEMP)
-          </button>
+        </mat-toolbar>
+  
+        <!-- Page content-->
+        <div class="py-12 px-20">
+          <router-outlet></router-outlet>
         </div>
   
-        <!-- Sidenav Footer -->
-        <div class="mt-auto">
-          <div class="mode-change">
-            <mat-icon>brightness_2</mat-icon>
-            <span>Light Mode</span>
-            <mat-slide-toggle color="primary">On</mat-slide-toggle>
-          </div>
-          <button mat-button class="cursor-pointer bg-dm-secondary sidenav-icon-button">Logout</button>
-        </div>
-      </div>
-    </mat-sidenav>
-
-    <mat-sidenav-content class="w-auto bg-secondary-gray/10">
-      <!-- TOOL BAR -->
-      <mat-toolbar class="shadow-md">
-        <button mat-icon-button (click)="sidenav.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span class="flex-grow flex-shrink basis-auto"></span>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <mat-icon>favorite</mat-icon>
-        </button>
-      </mat-toolbar>
-
-      <!-- Page content-->
-      <div class="py-12 px-20">
-        <router-outlet></router-outlet>
-      </div>
-
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
 </main>
 
 

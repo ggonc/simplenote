@@ -7,19 +7,19 @@ import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { NotesListComponent } from './core/notes-list/notes-list.component';
 import { NoteComponent } from './core/note/note.component';
 import { SettingsComponent } from './core/settings/settings.component';
-import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { Error404Component } from './core/error404/error404.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { AppRoutingModule } from './app-routing.module';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -29,7 +29,6 @@ import { MatInputModule } from '@angular/material/input';
     NotesListComponent,
     NoteComponent,
     SettingsComponent,
-    NavBarComponent,
     Error404Component
   ],
   imports: [

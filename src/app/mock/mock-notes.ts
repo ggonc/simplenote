@@ -1,6 +1,6 @@
-import { NotesViewModel } from "./models/notes.type";
+import { NoteViewModel } from "./models/notes.type";
 
-export const NOTES : NotesViewModel[] = [
+export const NOTES : NoteViewModel[] = [
     {  
       id: 1,
       title: "Title #01",

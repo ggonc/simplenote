@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'home', component: DashboardComponent},
   { path: 'notes', component: NotesListComponent},
   { path: 'note/:id', component: NoteComponent},
-  { path: 'settings', component: SettingsComponent}
+  { path: 'settings', component: SettingsComponent},
+  { path: '**', component: Error404Component}
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-export interface NotesViewModel {
+export interface NoteViewModel {
     id: number,
     title: string;
     content: string;

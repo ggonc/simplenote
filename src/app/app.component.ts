@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'notepad';
   opened = true;
-  
-  constructor() { }
+  error = false;
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    if (this.router.url == "a")
+    this.error = true
   }
 
 }
